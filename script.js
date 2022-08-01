@@ -2,17 +2,20 @@ let ethws = new WebSocket("wss://stream.binance.com:9443/ws/etheur@trade")
 
 let btcws = new WebSocket("wss://stream.binance.com:9443/ws/btceur@trade")
 
-// let xmrws = new WebSocket("wss://stream.binance.com:9443/ws/xmr")
+let xmrws = new WebSocket("wss://stream.binance.com:9443/ws/xmrusdt@trade")
 
 let stockPriceElementEth = document.getElementById("stock-price-eth")
 let stockPriceElementBtc = document.getElementById("stock-price-btc")
+let stockPriceElementXmr = document.getElementById("stock-price-xmr")
 
 // 88a0450c-46fe-49d9-9c0e-c38f48e65535
 
-// console.log("hi")
+xmrws.onmessage = (event) => {
+  let stockObject = JSON.parse(event.data)
 
-// xmrws.onmessage = (event) => {
-// }
+  stockPriceElementXmr.innerText = parseFloat(stockObject.p).toFixed(2)
+  // console.log(event)
+}
 
 // handle new message
 ethws.onmessage = (event) => {
@@ -28,5 +31,5 @@ btcws.onmessage = (event) => {
   let stockObject = JSON.parse(event.data)
 
   stockPriceElementBtc.innerText = parseFloat(stockObject.p).toFixed(2)
-  // console.log(stockObject.p)
+  // console.log(stockObject)
 }
