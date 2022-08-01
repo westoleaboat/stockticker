@@ -16,7 +16,7 @@ body {
 }
 
 .price-container {
-  width: 550px;
+  width: 600px;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 162px;
+  width: 170px;
 
 
   background: rgba(221, 218, 218, 0.34);
