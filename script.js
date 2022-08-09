@@ -8,13 +8,20 @@ let stockPriceElementEth = document.getElementById("stock-price-eth")
 let stockPriceElementBtc = document.getElementById("stock-price-btc")
 let stockPriceElementXmr = document.getElementById("stock-price-xmr")
 
-// 88a0450c-46fe-49d9-9c0e-c38f48e65535
+const formatterEUR = new Intl.NumberFormat(undefined, {
+  style: "currency",
+  currency: "EUR",
+})
+
+const formatterUSDT = new Intl.NumberFormat(undefined, {
+  style: "currency",
+  currency: "USD",
+})
 
 xmrws.onmessage = (event) => {
   let stockObject = JSON.parse(event.data)
 
-  stockPriceElementXmr.innerText = parseFloat(stockObject.p).toFixed(2)
-  // console.log(event)
+  stockPriceElementXmr.innerText = formatterUSDT.format(stockObject.p)
 }
 
 // handle new message
@@ -22,14 +29,12 @@ ethws.onmessage = (event) => {
   // convert data stream into js object
   let stockObject = JSON.parse(event.data)
 
-  stockPriceElementEth.innerText = parseFloat(stockObject.p).toFixed(2)
-  // console.log(stockObject.p)
+  stockPriceElementEth.innerText = formatterEUR.format(stockObject.p)
 }
 
 btcws.onmessage = (event) => {
   // convert data stream into js object
   let stockObject = JSON.parse(event.data)
 
-  stockPriceElementBtc.innerText = parseFloat(stockObject.p).toFixed(2)
-  // console.log(stockObject)
+  stockPriceElementBtc.innerText = formatterEUR.format(stockObject.p)
 }

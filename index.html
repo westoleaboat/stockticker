@@ -12,6 +12,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
+  <!-- font2 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+
   <title>Stock</title>
 </head>
 
@@ -26,27 +32,32 @@
       <div class="container-items">
 
         <div class="btcprice-container">
-          <h1 id="stock-name-btc">Bitcoin BTC (eur)</h1>
+          <h1 id="stock-name-btc">Bitcoin<br>BTC</h1>
+
+          <div class="stock-items">
+            <a href="https://bitcoin.org/bitcoin.pdf">whitepaper</a>
+          </div>
 
           <h1 id="stock-price-btc">Loading...</h1>
-          <!-- <p></p> -->
-          <!-- <h3>eur</h3> -->
+
         </div>
 
         <div class="ethprice-container">
-          <h1 id="stock-name-eth">Ethereum ETH (eur)</h1>
+          <h1 id="stock-name-eth">Ethereum<br>ETH</h1>
 
           <h1 id="stock-price-eth">Loading...</h1>
         </div>
 
         <div class="xmrprice-container">
-          <h1 id="stock-name-xmr">Monero XMR (usdt)</h1>
+          <h1 id="stock-name-xmr">Monero<br>XMR</h1>
 
           <h1 id="stock-price-xmr">Loading...</h1>
         </div>
 
 
       </div>
+      <h3 class="b-right">made with binance websocket</h3>
+
 
     </div>
 
