@@ -1,3 +1,3 @@
-![live-stock-crypto](https://user-images.githubusercontent.com/68698872/182154446-f2d31ec4-230e-420c-be9d-a56ae1e2574a.png)
+![live-stock-crypto](https://user-images.githubusercontent.com/68698872/182160689-4eaa667e-4269-446e-bba9-10a9fec9010a.png)
 # stockticker
 css js app
